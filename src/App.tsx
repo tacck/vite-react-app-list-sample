@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import MemberCard from "./MemberCard";
 
 function App() {
@@ -32,6 +32,9 @@ function App() {
       maxWidth="xl"
       sx={{ background: "black", color: "white", height: "100vh" }}
     >
+      <Grid item xs={12}>
+        <Typography variant="h1">Team members</Typography>
+      </Grid>
       <Grid container spacing={2}>
         {members.map((member) => {
           return <MemberCard member={member} />;
